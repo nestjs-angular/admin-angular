@@ -1,0 +1,33 @@
+<h2>Mi perfil</h2>
+<form [formGroup]="infoForm" (submit)="infoSubmit()" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+        <label class="form-label">Nombre completo</label>
+        <input formControlName="first_name" type="text" class="form-control" >
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Apellido completo</label>
+        <input formControlName="last_name" type="text" class="form-control">
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Email</label>
+        <input formControlName="email" type="email" class="form-control">
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+</form>
+
+<h2 class="mt-5">Password</h2>
+<form [formGroup]="passwordForm" (submit)="passwordSubmit()" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+        <label class="form-label">Contraseña</label>
+        <input formControlName="password" type="password" class="form-control" >
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Repetir contraseña</label>
+        <input formControlName="password_confirm" type="password" class="form-control">
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+</form>

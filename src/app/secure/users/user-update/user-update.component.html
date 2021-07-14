@@ -1,0 +1,24 @@
+<h2>Actualizar usuario</h2>
+<form [formGroup]="form" (submit)="submit()" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+        <label class="form-label">Nombre completo</label>
+        <input formControlName="first_name" type="text" class="form-control" >
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Apellido completo</label>
+        <input formControlName="last_name" type="text" class="form-control">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input formControlName="email" type="email" class="form-control">
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Rol</label>
+        <select formControlName="role_id" class="form-select" >
+            <option *ngFor="let role of roles" [value]="role.id">{{role.name}}</option>
+        </select>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+</form>

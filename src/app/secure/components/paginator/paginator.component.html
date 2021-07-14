@@ -1,0 +1,10 @@
+<nav>
+    <ul class="pagination">
+        <li class="page-item" [ngClass]="{'disabled': previousPage}">
+            <a class="page-link btn" (click)="prev()" >Atras</a>
+        </li>
+        <li class="page-item" [ngClass]="{'disabled': nextPage}">
+            <a class="page-link btn" (click)="next()">Siguiente</a>
+        </li>
+    </ul>
+</nav>
